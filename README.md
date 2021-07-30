@@ -25,6 +25,10 @@ It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
 # Other infomations:
 Chip CP2012 only support 1M baudrate. It can't work on RTL8720x uart download flash mode speed 1500000.
 
+# Known issues
+1) First time upload will be failure due to amebad_image_tool.exe(no source) do something and let processor back to normal mode.
+   It only happend and just onece in case when usb-serial just plug-in.
+
 #
  Author:Joe Hsieh
  Email:jojoling@gmail.com
