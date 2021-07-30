@@ -14,16 +14,13 @@ not yet.
 # Apple env.
 not yet.
 
-# hardware modication:
+# Hardware modication:
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
-
 ![](https://i.stack.imgur.com/fMrDh.png?raw=true)
 
-![](https://github.com/crystal-ameba/vscode-crystal-ameba/blob/master/assets/demo.png?raw=true)
-
-#Other inofrmations:
+# Other infomations:
 Chip CP2012 only support 1M baudrate. It can't work on RTL8720x uart download flash mode speed 1500000.
 
-# Author
-Joe Hsieh
+#
+Author:Joe Hsieh
 Email:jojoling@gmail.com
