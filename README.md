@@ -10,6 +10,7 @@ You can reference below link to get started: http://www.amebaiot.com/ameba-ardui
 * Windows env.
 
 Download and replace upload_image_tool_windows.exe to your installed folder.
+
 Example: C:\Users\xxxxxx\AppData\Local\Arduino15\packages\realtek\tools\ameba_d_tools\1.0.5
 
 * Linux env. 
