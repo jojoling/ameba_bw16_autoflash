@@ -1,17 +1,20 @@
 # Auto program feature in Arduino Ameba platform.
 
-## How to add realtek ameba core files:
+Here is pathed for auto program flash without push BUN and reset buttons.
+
+# Install ameba
 You can reference below link to get started: http://www.amebaiot.com/ameba-arduino-getting-started/
 
-Once you have installed. You need to do as below action:
+# Pathed your env.
 
-# Windows env.
+* Windows env.
 1.Download and replace upload_image_tool_windows.exe to your installed path.
 ex: C:\Users\xxxxxx\AppData\Local\Arduino15\packages\realtek\tools\ameba_d_tools\1.0.5
 
-# Linux env.
+* Linux env.
 not yet.
-# Apple env.
+
+* Apple env.
 not yet.
 
 # Hardware modication:
