@@ -26,5 +26,6 @@ It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
 Chip CP2012 only support 1M baudrate. It can't work on RTL8720x uart download flash mode speed 1500000.
 
 #
-<br/>Author:Joe Hsieh
+
+Author:Joe Hsieh
 Email:jojoling@gmail.com
