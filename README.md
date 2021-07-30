@@ -8,13 +8,16 @@ You can reference below link to get started: http://www.amebaiot.com/ameba-ardui
 # Pathed your env.
 
 * Windows env.
+
 1.Download and replace upload_image_tool_windows.exe to your installed path.
 ex: C:\Users\xxxxxx\AppData\Local\Arduino15\packages\realtek\tools\ameba_d_tools\1.0.5
 
 * Linux env.
+
 not yet.
 
 * Apple env.
+
 not yet.
 
 # Hardware modication:
