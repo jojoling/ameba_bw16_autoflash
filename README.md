@@ -13,6 +13,7 @@ Download and replace upload_image_tool_windows.exe to your installed folder.<br/
 ex: C:\Users\xxxxxx\AppData\Local\Arduino15\packages\realtek\tools\ameba_d_tools\1.0.5
 
 * Linux
+
 Download and replace upload_image_tool_linux to your installed folder.<br/>
 ex: ~/snap/arduino/61/.arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
