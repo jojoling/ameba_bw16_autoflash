@@ -1,6 +1,6 @@
 # Auto program feature in Arduino Ameba platform.
 
-Here is pathed for auto program flash without push BUN and reset buttons.
+Here is patched for auto program flash without push BUN and reset buttons.
 
 # Install ameba
 You can reference below link to get started: http://www.amebaiot.com/ameba-arduino-getting-started/
