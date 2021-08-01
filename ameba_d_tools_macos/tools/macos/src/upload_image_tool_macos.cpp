@@ -50,7 +50,7 @@ using namespace std;
 
 #else
 
-#error compiler env doesn't supported!
+#error compiler is not supported!
 
 #endif
 
