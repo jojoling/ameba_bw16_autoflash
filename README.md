@@ -24,6 +24,7 @@ ex: ~/snap/arduino/61/.arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
 <br/>nRST => EN
 <br/>GPIO0 => LOG_TX
+
 ![](https://i.stack.imgur.com/fMrDh.png?raw=true)
 
 # Other infomations:
