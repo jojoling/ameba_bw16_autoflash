@@ -19,6 +19,8 @@ ex: ~/snap/arduino/61/.arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
 * MacOS
 
+Download and replace upload_image_tool_macos to your installed folder.<br/>
+ex: ~/Library/Arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
 # Hardware modication:
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
