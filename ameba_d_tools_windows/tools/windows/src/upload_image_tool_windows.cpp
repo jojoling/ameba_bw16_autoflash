@@ -6,9 +6,11 @@ mingw32-g++.exe -o upload_image_tool_windows.exe upload_image_tool_windows.cpp -
 i686-w64-mingw32-g++.exe -o upload_image_tool_windows.exe upload_image_tool_windows.cpp -static
 
 linux:
-g++ -o upload_image_tool_linux tools/linux/src/upload_image_tool_linux.cpp -static
-g++ -std=c++11 -o upload_image_tool_linux upload_image_tool_linux.cpp -static
-g++ -std=c++11 -o upload_image_tool_linux upload_image_tool_linux.cpp -lpthread
+g++ -m32 -std=c++11 -lpthread -static -o upload_image_tool_linux upload_image_tool_linux.cpp
+g++ -std=c++11 -lpthread -static -o upload_image_tool_linux upload_image_tool_linux.cpp
+
+macos:
+g++ -std=c++11 -lpthread -o upload_image_tool_macos upload_image_tool_macos.cpp
 
 */
 
@@ -32,23 +34,24 @@ g++ -std=c++11 -o upload_image_tool_linux upload_image_tool_linux.cpp -lpthread
 using namespace std;
 
 
-#if defined(__WIN32__) // MINGW
+
+#if defined(__WIN32__) // MINGW64
 #include <windows.h>
 #define FD HANDLE
 #define sleep_ms(s) msleep(s)
 //#define sleep(n) Sleep(n)
 
-#elif defined(__linux__) // ubuntu 32 bits.
+#elif defined(__linux__) || defined(__APPLE__)// ubuntu 32 bits  and OS X 64bits
 //#error stop.....
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #define FD int
 #define sleep_ms(s) msleep(s) //usleep((s*1000))
 
-#elif defined(__APPLE__)
-
 #else
-//<TODO>
+
+#error compiler env doesn't supported!
+
 #endif
 
 bool auto_flash = true;
@@ -105,7 +108,7 @@ int set_DTR_RTS(FD fd, unsigned short level)
         EscapeCommFunction(fd, SETRTS);
         EscapeCommFunction(fd, SETDTR);
     }
-#elif defined(__linux__)
+#elif defined(__linux__) || defined(__APPLE__)
 
   int status;
   
@@ -123,8 +126,6 @@ int set_DTR_RTS(FD fd, unsigned short level)
 
   ioctl(fd, TIOCMSET, &status);
 
-#elif defined(__APPLE__)
-    //<TODO>
 #endif
     return 0;
 }
@@ -152,16 +153,13 @@ void reset_method(char * com , int method) {
         printf("Error in opening serial port");
         return;
     }
-#elif defined(__linux__)
+#elif defined(__linux__) || defined(__APPLE__)
 
     fd = open( com , O_RDWR | O_NOCTTY | O_NDELAY);
     if (fd <0) {
        printf("Error in opening serial port %s.\n",com);
     }
 
-
-#elif defined(__APPLE__)
-    //<TODO>
 #endif
     // DTR RTS EN BUN
     //   1  1   1  1
@@ -191,10 +189,8 @@ void reset_method(char * com , int method) {
     }
 #if defined(__WIN32__)
     CloseHandle(fd); //Closing the Serial Port
-#elif defined(__linux__)
+#elif defined(__linux__) || defined(__APPLE__)
     close(fd);
-#elif defined(__APPLE__)
-    //<TODO>
 #endif
 
 }
@@ -222,7 +218,9 @@ void image_tool_thread(char* t1_com) {
     // copy command in cmdss to cmd
     t1_cmd = t1_cmdss.str();
 #elif defined(__APPLE__)
-//<TODO>
+    t1_cmdss << "./tools/macos/image_tool/amebad_image_tool " << t1_com;
+    getline(t1_cmdss, t1_cmd);
+    cout << t1_cmd << endl;
 #endif
     system(t1_cmd.c_str());
 
