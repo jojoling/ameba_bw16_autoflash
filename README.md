@@ -22,8 +22,8 @@ ex: ~/snap/arduino/61/.arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
 # Hardware modication:
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
-<br/>nRST => EN
-<br/>GPIO0 => LOG_TX
+<br/>nRST => EN , BW16_Pin3
+<br/>GPIO0 => LOG_TX ,BW16_Pin11
 
 ![](https://i.stack.imgur.com/fMrDh.png?raw=true)
 
