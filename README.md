@@ -16,11 +16,13 @@ ex: C:\Users\xxxxxx\AppData\Local\Arduino15\packages\realtek\tools\ameba_d_tools
 
 Download and replace upload_image_tool_linux to your installed folder.<br/>
 ex: ~/snap/arduino/61/.arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
+<font color=#FF0000> It's not work yet.<font>
 
 * MacOS
 
 Download and replace upload_image_tool_macos to your installed folder.<br/>
 ex: ~/Library/Arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
+<font color=#FF0000> It's not work yet.<font>
 
 # Hardware modication:
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
