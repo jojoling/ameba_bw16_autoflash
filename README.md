@@ -48,7 +48,7 @@ ex: ~/Library/Arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
 # snapshot:
 winidows 10:
-![](pic/flash_windows.png)
+![windows 10](pic/flash_windows.png)
 
 linux mint:
 ft232rl
