@@ -51,16 +51,17 @@ winidows 10:<br/>
 ![windows 10](pic/flash_windows.png)
 
 linux mint:
-ft232rl<br/>
-![](pic/flash_ft232rl.png)
-
-ch340<br/>
-![](pic/flash_ch340.png)
-
 cp2102<br/>
 ![](pic/flash_cp2102.png)
 
+verbose = 5<br/>
+![](pic/flash_verbose_5.png)
 
+verbose =7, with recevied packets for debug purpose.<br/>
+![](pic/flash_verbose_7.png)
+
+baudrate=15200, force to low speed 115200 to program flash.<br/>
+![](pic/flash_115200.png)
 
 # Hardware modication:
 It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
