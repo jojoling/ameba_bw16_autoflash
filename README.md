@@ -10,18 +10,18 @@ pass: cp2102/ch340/ft232rl
 platform: windows 10/ linux
 macOS: It didn't pass due to macOS VM slowly in my side. It should test on read computer again.
 
-more command added:
---verbose=[n] , n can be 3,5 and 7.
-display more information on screen.
+more command added:<br/>
+--verbose=[n] , n can be 3,5 and 7.<br/>
+display more information on screen.<br/>
 
---baudrate=[speed]
-force rs232 baudrate as you want.
-windows:1500000,1444400,1382400,1000000,921600,500000,460800,380400,230400,380400,128000 and 115200.
-linux:1500000,1000000,921600,500000,460800,230400 and 115200.
-macOS:1500000,1444400,1382400,1000000,921600,500000,460800,380400,230400,380400,128000 and 115200.
+--baudrate=[speed]<br/>
+force rs232 baudrate as you want.<br/>
+windows:1500000,1444400,1382400,1000000,921600,500000,460800,380400,230400,380400,128000 and 115200.<br/>
+linux:1500000,1000000,921600,500000,460800,230400 and 115200.<br/>
+macOS:1500000,1444400,1382400,1000000,921600,500000,460800,380400,230400,380400,128000 and 115200.<br/>
 
---auto=[0|1]
-enable auto into flash mode or not.
+--auto=[0|1]<br/>
+enable auto into flash mode or not.<br/>
 
 v1.0:
 Tool only do DTR/RTS control for auto reset function.
