@@ -47,17 +47,17 @@ Download and replace upload_image_tool_macos to your installed folder.<br/>
 ex: ~/Library/Arduino15/packages/realtek/tools/ameba_d_tools/1.0.5
 
 # snapshot:
-winidows 10:
+winidows 10:<br/>
 ![windows 10](pic/flash_windows.png)
 
 linux mint:
-ft232rl
+ft232rl<br/>
 ![](pic/flash_ft232rl.png)
 
-ch340
+ch340<br/>
 ![](pic/flash_ch340.png)
 
-cp2102
+cp2102<br/>
 ![](pic/flash_cp2102.png)
 
 
