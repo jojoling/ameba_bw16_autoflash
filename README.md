@@ -74,6 +74,10 @@ It needs to add special compoments likes ESP8266/ESP32 auto program circuit.
 V2.0:
 CP2102 use baudrate 921600 instead of 1000000 for response packets correctly.
 
+All information was retrieved by amebad_image_tool.exe and ImageTool.exe.<br/>
+tools used:<br/>
+SerialMon,IO ninja, wireshark and tshark.<br/>
+
 V1.0:
 Chip CP2012 only supports speed of 1M baudrate. It can't work on RTL8720x uart download flash mode speed 1500000.
 # Known issues
