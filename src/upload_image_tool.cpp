@@ -247,7 +247,7 @@ void reset_method(FD fd , int method) {
         set_DTR_RTS(fd,0x1); // TX_LOG LOW
         sleep_ms(200);
         set_DTR_RTS(fd,0x3); // normal
-        sleep_ms(5000);
+        sleep_ms(500);
 
     } else {
         // reset system.
