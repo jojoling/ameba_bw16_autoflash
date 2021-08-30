@@ -1,3 +1,5 @@
+[//]: # (Title: Marketing Meeting Notes)
+[//]: # (test: https://github.com/jojoling/ameba_bw16_autoflash/blob/main/pic/flash_windows.png)
 # Auto program feature in Arduino Ameba platform.
 
 Here is patched for auto program flash without push BUN and RESET buttons.
