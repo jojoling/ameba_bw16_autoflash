@@ -1,4 +1,4 @@
-<meta property="og:image" content="http://https://github.com/jojoling/ameba_bw16_autoflash/tree/main/pic/flash_windows.png" />
+<meta property="og:image" content="http://https://github.com/jojoling/ameba_bw16_autoflash/tree/main/pic/flash_windows.png" />  
 # Auto program feature in Arduino Ameba platform.
 
 Here is patched for auto program flash without push BUN and RESET buttons.
