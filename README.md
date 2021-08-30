@@ -1,4 +1,3 @@
-% 26 October 2016
 # Auto program feature in Arduino Ameba platform.
 
 Here is patched for auto program flash without push BUN and RESET buttons.
