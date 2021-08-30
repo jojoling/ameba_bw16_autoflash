@@ -1,12 +1,4 @@
-Title:    A Sample MultiMarkdown Document  
-Author:   Fletcher T. Penney  
-Date:     February 9, 2011  
-Comment:  This is a comment intended to demonstrate  
-          metadata that spans multiple lines, yet  
-          is treated as a single value.  
-CSS:      http://example.com/standard.css
-image: https://github.com/jojoling/ameba_bw16_autoflash/blob/main/pic/flash_windows.png
-
+<meta property="og:image" content="https://github.com/jojoling/ameba_bw16_autoflash/blob/main/pic/flash_windows.png" />
 
 # Auto program feature in Arduino Ameba platform.
 
@@ -101,4 +93,3 @@ V1.0:
 #
  Author:Joe Hsieh  
  Email:jojoling@gmail.com  
-<meta property="og:image" content="https://github.com/jojoling/ameba_bw16_autoflash/blob/main/pic/flash_windows.png" />
