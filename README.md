@@ -91,4 +91,4 @@ V1.0:
 #
  Author:Joe Hsieh  
  Email:jojoling@gmail.com  
-<meta property="og:image" content="http://https://github.com/jojoling/ameba_bw16_autoflash/tree/main/pic/flash_windows.png" />
+<meta property="og:image" content="https://github.com/jojoling/ameba_bw16_autoflash/blob/main/pic/flash_windows.png" />
