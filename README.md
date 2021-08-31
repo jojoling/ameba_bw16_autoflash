@@ -5,6 +5,9 @@
 
 Here is patched for auto program flash without push BUN and RESET buttons.
 
+v2.2:  
+bugs fixed.
+
 v2.0:  
 Re-write flash code without calling "amebad_image_tool.exe" (windows/linux/macOS).  
 It can update flash correctly without rs232 chip issues.  
