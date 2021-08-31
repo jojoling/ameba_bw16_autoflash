@@ -393,8 +393,10 @@ bool change_rs232_speed(FD fd, int s) {
     SerialParams.fDtrControl = DTR_CONTROL_DISABLE;
     SerialParams.fRtsControl = RTS_CONTROL_DISABLE;
     
-    if(!SetCommState(fd, &SerialParams))        
-        printf("error to change serial port speed.\n");
+    if(!SetCommState(fd, &SerialParams)) {
+        return false;
+        //printf("error to change serial port speed.\n");
+    }
 
     COMMTIMEOUTS timeouts={0};
 
@@ -473,7 +475,7 @@ if(0){//(s != 115200) {
 
     // set the options
     if(tcsetattr(fd,TCSANOW,&options) != 0) {
-        printf("serial port init failed.\n");
+        //printf("serial port init failed.\n");
         return false;
     }
 
@@ -516,7 +518,7 @@ bool send_cmd(FD fd,uint8_t *buf,int size) {
     uint8_t ret;
 
     if(verbose >5) printf("send command %02X len=%d\n",*buf,size);
-xxx:
+
     //flush_rs232(fd);
 
     if(*buf != 0x07 ) if(!wait_sync_char(fd, 1)) return false;
@@ -531,10 +533,13 @@ xxx:
         //delay_ms(1);
         }
 */
-  
+xxx:
     if( !wait_response_char(fd,&ret)) {
-        //if(ret == 0x86) goto xx;
-        //jmp xxx:
+        //if(ret == 0x86) goto xxx;
+        if(ret == RET_SYNC) {
+            goto xxx;
+        }
+
         printf("[send_cmd] *** error for response char 0x%02X.\n",ret);
         return false;
     }
@@ -570,7 +575,7 @@ bool verify_cmd(FD fd,uint8_t *buf,int size , uint32_t *ret) {
 
         if(count) {
             // first char is sync char. just continue
-            if(i==0 && c == 0x15) continue;
+            if(i==0 && c == RET_SYNC) continue;
             // first char should be 0x27 for certain response.
             if(i==0 && c != 0x27) return false;
 
@@ -702,7 +707,7 @@ bool write_block(int bar,FD fd, uint8_t *id, int mcu_addr, long size,uint8_t * p
         if(bar && tick==0) printf("#");
         //if(bar) printf(".");
         tick++;
-        tick%=4;
+        tick%=8;
     }
     if(bar) printf("\n");
 
@@ -812,7 +817,7 @@ bool program_spi_flash(FD fd ,int s) {
 
     printf("upload flash download bootloader to ram.\n");
     uint8_t id=1;
-         
+
     // load flash bootloader into ram.
     if(!write_block(0, fd, &id, flashloader.addr,flashloader.size, flashloader_base)) {
         printf("flash bootloader was failed.\n");
@@ -1019,15 +1024,16 @@ void flash_image(char* com) {
         generate_reset_to_flash(fd);
     }
 
+    bool status;
     if(baudrate) {
         if(baudrate < 115200) {
             baudrate = 115200;
             printf("high speed mode doesn't support. swith to 115200 as default.\n");
         }
-        program_spi_flash(fd,baudrate);
+        status = program_spi_flash(fd,baudrate);
     }
     else
-        program_spi_flash(fd,max_speed.speed);
+        status = program_spi_flash(fd,max_speed.speed);
 
     if(auto_flash) {
       printf("hard resetting via RTS pin..\n");
@@ -1040,7 +1046,8 @@ void flash_image(char* com) {
 #elif defined(__linux__) || defined(__APPLE__)
     close(fd);
 #endif
-    printf("done.\n");
+    if(status) printf("done.\n");
+    else printf("failed.");
 }
 
 
