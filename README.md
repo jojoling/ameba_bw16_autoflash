@@ -96,7 +96,7 @@ All information was retrieved from `amebad_image_tool.exe` and `ImageTool.exe` u
 SerialMon, IO Ninja, Wireshark and Tshark.  
 
 ## V1.0
-~~Chip CP2012 only supports speed of 1M baudrate. It can't work on RTL8720x UART download flash mode speed 1500000.  ~~
+~~Chip CP2012 only supports speed of 1M baudrate. It can't work on RTL8720x UART download flash mode speed 1500000.~~  
 
 # Known Issues
 
